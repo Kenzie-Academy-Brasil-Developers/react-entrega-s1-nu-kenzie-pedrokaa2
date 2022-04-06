@@ -3,21 +3,20 @@ import './style.css'
 const Card = ({description, type, value, index}) => {
   return (
     <li className = {type}>
-      <div>
-        <h3>
-          {description}
-        </h3>
-        <span>
-          {type}
-        </span>
-      </div>
-      <div>
-        <p>
-          {value}
-        </p>
-        <button>
-          <i class="fa-thin fa-trash"></i>
-        </button>
+      <div className = "cardList">
+        <div className = "h3SpanValue">
+          <h3 id = "h3TotalValue">
+            {description}
+          </h3>
+          <span id = "spanValue">
+            {type}
+          </span>
+        </div>
+        <div className = "valueDivP">
+          <p id = "valueParagraph">
+            R$ {value.toFixed(2)}
+          </p>
+        </div>
       </div>
     </li>
   )

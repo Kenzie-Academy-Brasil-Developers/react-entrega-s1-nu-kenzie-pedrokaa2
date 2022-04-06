@@ -11,16 +11,18 @@ function App() {
     <div className="App">
       <Header/>
       <Encapsulate>
-        <Form
-          listTransactions = {listTransactions}
-          setListTransactions = {setListTransactions}
-        />
-        <List
-          listTransactions = {listTransactions}
-        />
-        <TotalMoney
-          listTransactions = {listTransactions}
-        />
+        <div className = "FormMoneyFlex">
+          <Form
+            listTransactions = {listTransactions}
+            setListTransactions = {setListTransactions}
+          />
+          <TotalMoney
+            listTransactions = {listTransactions}
+          />
+        </div>
+          <List
+            listTransactions = {listTransactions}
+          />
       </Encapsulate>
     </div>
   );

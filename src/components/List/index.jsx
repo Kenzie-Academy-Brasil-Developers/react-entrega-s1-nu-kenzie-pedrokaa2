@@ -3,7 +3,7 @@ import Card from "../Card";
 
 const List = ({listTransactions}) => {
   return (
-    <ul>
+    <ul className = "list">
       {listTransactions.map((transaction, index) => {
         return (
           <Card 

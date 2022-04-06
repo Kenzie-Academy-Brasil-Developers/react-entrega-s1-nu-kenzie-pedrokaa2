@@ -3,49 +3,70 @@ import "./style.css";
 
 const Form = ({ listTransactions, setListTransactions }) => {
   const [descriptionList, setDescriptionList] = useState("Sem Descrição");
-  const [selectOption, setSelectOption] = useState("entrada");
+  const [selectOption, setSelectOption] = useState("Entrada");
   const [valueBox, setValueBox] = useState(0);
   const HandleForm = () => {
-    const objectForm = 
-    {
-      description: descriptionList,
-      type: selectOption,
-      value: Number(valueBox)
+    if (selectOption === "Entrada"){
+      const objectForm = 
+      {
+        description: descriptionList,
+        type: selectOption,
+        value: Number(valueBox)
+      }
+      setListTransactions([...listTransactions, objectForm])
+    } else if (selectOption === "Despesa"){
+      const objectForm = 
+      {
+        description: descriptionList,
+        type: selectOption,
+        value: Number(-valueBox)
+      }
+      setListTransactions([...listTransactions, objectForm])
     }
-    setListTransactions([...listTransactions, objectForm])
   }
   return (
-    <form
+    <form className='formNuKenzie'
       onSubmit={(event) => {
         event.preventDefault();
       }}
     >
-      <p>Descrição</p>
-      <input type="text" placeholder="Digite aqui sua descrição" 
+      <p
+        className = 'descriptionParagraph'
+      >
+        Descrição
+      </p>
+      <input id='descriptionInput' type="text" placeholder="Digite aqui sua descrição" 
         onChange = {(event) => {
           setDescriptionList(event.target.value)
         }}
       />
-      <span>Ex: Compra de roupas</span>
-      <p>Valor</p>
-      <div id="valueMoneyBox">
-        <input type="text" placeholder="1"
-          onChange = {(event) => {
-            setValueBox(event.target.value)
-          }}
-        ></input>
-        <div>R$</div>
+      <span id="spanExample" >Ex: Compra de roupas</span>
+      <div className="totalValueForm">
+        <div className = "valueBoxComplete">
+          <p className="valueParagraph">Valor</p>
+          <div id="valueMoneyBox">
+            <input id="ValueBox" type="text" placeholder="1"
+              onChange = {(event) => {
+                setValueBox(event.target.value)
+              }}
+            ></input>
+            <div id="MoneySign">R$</div>
+          </div>
+        </div>
+        <div className = "typeValueBoxComplete">
+          <p className="valueParagraph">Tipo de Valor</p>
+          <select name="" id="ValueSelect" required
+            onChange = {(event) => {
+              setSelectOption(event.target.value)
+            }}
+          >
+            <option value="Entrada">Entrada</option>
+            <option value="Despesa">Despesa</option>
+          </select>
+        </div>
       </div>
-      <p>Tipo de Valor</p>
-      <select name="" id="" required
-        onChange = {(event) => {
-          setSelectOption(event.target.value)
-        }}
-      >
-        <option value="Entrada">Entrada</option>
-        <option value="Despesa">Despesa</option>
-      </select>
       <button
+         id = "pinkButton"
          onClick = {() => HandleForm()}
       >
         Inserir Valor

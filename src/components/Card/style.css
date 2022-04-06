@@ -1,0 +1,40 @@
+.cardList {
+  margin-top: 39px;
+  border-radius: 4px;
+  border-right: 1px solid #E9ECEF;
+  border-top: 1px solid #E9ECEF;
+  border-bottom: 1px solid #E9ECEF;
+  padding: 12px;
+  display: flex;
+  height: 76px;
+  width: 560px;
+}
+
+.FormMoneyFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+.valueDivP {
+  display: flex;
+  align-items: center;
+}
+
+#valueParagraph {
+  margin-left: 360px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-family: 'Nunito', sans-serif;
+  color: #212529;
+  width: 100px;
+}
+
+.Entrada {
+  border-left: 4px solid #03B898;
+  border-radius: 4px;
+}
+
+.Despesa {
+  border-left: 4px solid #E9ECEF;
+  border-radius: 4px;
+}

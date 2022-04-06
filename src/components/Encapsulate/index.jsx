@@ -2,7 +2,7 @@ import './style.css'
 
 const Encapsulate = ({children}) => {
   return (
-    <div>
+    <div className="encapsulate">
       {children}
     </div>
   )
