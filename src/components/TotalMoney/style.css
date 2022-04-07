@@ -2,7 +2,6 @@
   display: flex;
   height: 76px;
   width: 363px;
-  margin-left: 258px;
   margin-top: 16px;
   border-radius: 4px;
   border: 1px solid #E9ECEF;
@@ -40,4 +39,11 @@
   color: #FD377E;
   font-weight: 600;
   width: 80px;
+}
+
+@media screen and (max-width: 460px){
+  .totalMoneyBox {
+    width: 363px;
+    margin-left: 73px;
+  }
 }

@@ -38,3 +38,26 @@
   border-left: 4px solid #E9ECEF;
   border-radius: 4px;
 }
+
+@media screen and (max-width: 1280px){
+  .cardList {
+    width: 363px;
+    margin-left: 0px;
+  }
+  #valueParagraph {
+    margin-left: 170px;
+  }
+}
+
+@media screen and (max-width: 460px){
+  li {
+    margin-left: 80px;
+  }
+  .cardList {
+    width: 263px;
+    margin-left: 0px;
+  }
+  #valueParagraph {
+    margin-left: 70px;
+  }
+}

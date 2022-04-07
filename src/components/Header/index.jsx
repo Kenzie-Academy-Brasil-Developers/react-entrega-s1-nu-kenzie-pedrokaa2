@@ -1,4 +1,3 @@
-import './reset.css'
 import "./style.css";
 import LogoNuKenzie from '../../img/NuKenzie.svg'
 

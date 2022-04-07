@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./style.css";
 
 const Form = ({ listTransactions, setListTransactions }) => {
-  const [descriptionList, setDescriptionList] = useState("Sem Descrição");
+  const [descriptionList, setDescriptionList] = useState("");
   const [selectOption, setSelectOption] = useState("Entrada");
   const [valueBox, setValueBox] = useState(0);
   const HandleForm = () => {
@@ -35,7 +35,7 @@ const Form = ({ listTransactions, setListTransactions }) => {
       >
         Descrição
       </p>
-      <input id='descriptionInput' type="text" placeholder="Digite aqui sua descrição" 
+      <input id='descriptionInput' type="text" placeholder="Digite aqui sua descrição" required 
         onChange = {(event) => {
           setDescriptionList(event.target.value)
         }}
@@ -45,7 +45,7 @@ const Form = ({ listTransactions, setListTransactions }) => {
         <div className = "valueBoxComplete">
           <p className="valueParagraph">Valor</p>
           <div id="valueMoneyBox">
-            <input id="ValueBox" type="text" placeholder="1"
+            <input id="ValueBox" type="text" placeholder="1" required
               onChange = {(event) => {
                 setValueBox(event.target.value)
               }}
@@ -67,7 +67,11 @@ const Form = ({ listTransactions, setListTransactions }) => {
       </div>
       <button
          id = "pinkButton"
-         onClick = {() => HandleForm()}
+         onClick = {() => {
+           if (descriptionList !== ""){
+             HandleForm()
+           }
+         }}
       >
         Inserir Valor
       </button>

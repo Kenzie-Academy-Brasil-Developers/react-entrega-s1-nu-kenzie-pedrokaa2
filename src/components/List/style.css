@@ -1,3 +1,9 @@
 .list {
-  margin-right: 258px
+  margin-left: 228px
+}
+
+@media screen and (max-width: 1280px){
+  .list {
+    margin-left: 0;
+  }
 }
