@@ -4,10 +4,17 @@
   border-right: 1px solid #E9ECEF;
   border-top: 1px solid #E9ECEF;
   border-bottom: 1px solid #E9ECEF;
-  padding: 12px;
   display: flex;
   height: 76px;
-  width: 560px;
+  justify-content: center;
+  gap: 50%;
+}
+
+.deleteButton {
+  background-color: #E9ECEF;
+  border: 0;
+  color: #5B6166;
+  border-radius: 2.46px;
 }
 
 .FormMoneyFlex {
@@ -18,15 +25,14 @@
 .valueDivP {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #valueParagraph {
-  margin-left: 360px;
-  margin-right: 20px;
-  margin-bottom: 20px;
   font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  margin-right: 6px;
   color: #212529;
-  width: 100px;
 }
 
 .Entrada {
@@ -39,25 +45,9 @@
   border-radius: 4px;
 }
 
-@media screen and (max-width: 1280px){
+@media screen and (min-width: 768px){
   .cardList {
-    width: 363px;
-    margin-left: 0px;
-  }
-  #valueParagraph {
-    margin-left: 170px;
-  }
-}
-
-@media screen and (max-width: 460px){
-  li {
-    margin-left: 80px;
-  }
-  .cardList {
-    width: 263px;
-    margin-left: 0px;
-  }
-  #valueParagraph {
-    margin-left: 70px;
+    gap: 70%;
+    max-width: 768px;
   }
 }

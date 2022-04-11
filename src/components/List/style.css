@@ -1,9 +1,48 @@
 .list {
-  margin-left: 228px
+  width: 90vw;
+  max-width: 550px;
+  height: 240px;
+  overflow-y: scroll;
 }
 
-@media screen and (max-width: 1280px){
+.ListParagraph {
+  font-family: 'Nunito', sans-serif;
+  color: #5B6166;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.ListImage {
+  width: 90vw;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 768px){
   .list {
-    margin-left: 0;
+    max-width: 768px;
+    overflow: hidden;
+  }
+  .ListParagraph {
+    font-size: 18px;
+  }
+  .ListImage {
+    min-width: 50vw;
+    max-width: 70vw;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 1270px){
+  .list {
+    width: 600px;
+    height: 900px;
+  }
+  .ListParagraph {
+    width: 500px;
+  }
+  .ListImage {
+    width: 500px;
   }
 }

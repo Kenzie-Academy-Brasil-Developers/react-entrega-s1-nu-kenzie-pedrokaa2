@@ -1,6 +1,7 @@
 import './style.css'
 
-const Card = ({description, type, value, index}) => {
+const Card = ({description, type, value, deleteList}) => {
+
   return (
     <li className = {type}>
       <div className = "cardList">
@@ -16,6 +17,11 @@ const Card = ({description, type, value, index}) => {
           <p id = "valueParagraph">
             R$ {value.toFixed(2)}
           </p>
+          <button className = "deleteButton"
+            onClick = {()=> deleteList()}
+          >
+            <i className="fa-solid fa-trash"></i>
+          </button>
         </div>
       </div>
     </li>

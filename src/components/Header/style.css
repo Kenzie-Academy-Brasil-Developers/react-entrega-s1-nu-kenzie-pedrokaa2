@@ -9,12 +9,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 12%;
-  padding-right: 12%;
+  width: 100vw;
 }
 
 .headerLogo img {
   align-items: center;
+  width: 140px;
 }
 
 .headerLogo button {
@@ -23,24 +23,19 @@
   border: 1.4px solid #E9ECEF;
   text-align: center;
   font-size: 14px;
-  margin-left: 84.5%;
   padding: 15px;
   border-radius: 8px;
 }
 
 .childrenHeader {
-  width: 100%;
+  width: 100vw;
   display: flex;
+  justify-content: space-around;
 }
 
-@media screen and (max-width: 1280px){
-  .headerLogo button {
-    margin-left: auto;
-  }
-}
-
-@media screen and (max-width: 460px){
-  .headerLogo {
-    width: 100%;
+@media screen and (min-width: 768px){
+  .childrenHeader {
+    justify-content: center;
+    gap: 65%;
   }
 }
